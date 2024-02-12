@@ -7,6 +7,9 @@ fighter1.present();
 const fighter2 = new Subfighter("kamy", "ninja");
 fighter2.punch();
 fighter2.present();
+
+const pForm = document.getElementById("playerForm");
+
 // function fightForm(event) {
 //     event.preventDefault();
 //     const p1Wrp = document.getElementById('playerOneWrap');
@@ -17,7 +20,8 @@ fighter2.present();
 //     console.log(playerOneValue.value)
 // }
 
-// document.getElementById('startFightBtn').addEventListener('submit', (event) => {
-//     const p1 = document.getElementById('playerOneInput');
-//     console.log(p1.value)
-// });
+pForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    let p1 = document.getElementById('playerOneInput');
+    console.log(p1.value)
+});
