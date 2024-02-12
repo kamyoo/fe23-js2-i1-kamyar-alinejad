@@ -1,6 +1,6 @@
 import Fighters from "./fighters.js";
 
-export default class Subfighter extends Fighters {
+export default class Subfighter2 extends Fighters {
   #wins = 0;
   #losses = 0;
   #draws = 0;
@@ -9,10 +9,9 @@ export default class Subfighter extends Fighters {
   constructor(name, style, hp) {
     super(name, style, hp);
   }
-  punch() {
-    const punch = Math.floor(Math.random() * 20);
-    console.log(punch);
-    return punch;
+  sword() {
+    const sword = Math.floor(Math.random() * 30);
+    return sword;
   }
   winFight() {
     this.#wins++;
