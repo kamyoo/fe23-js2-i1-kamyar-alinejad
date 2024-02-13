@@ -1,12 +1,11 @@
 import Fighters from "./modules/fighters.js";
 import Subfighter1 from "./modules/subfighter1.js";
+import Subfighter2 from "./modules/subfighter2.js";
 
 const fighter1 = new Fighters("Tobbe", "karate");
-fighter1.present();
 
 const fighter2 = new Subfighter1("kamy", "ninja");
-fighter2.punch();
-fighter2.present();
+const fighter3 = new Subfighter2("kamy", "ninja");
 
 const pForm = document.getElementById("playerForm");
 
@@ -22,8 +21,9 @@ const pForm = document.getElementById("playerForm");
 
 pForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  const p1 = document.getElementById("playerOneInput");
-  const p2 = document.getElementById("playerTwoInput");
+  const p1Wrp = document.getElementById("playerOneWrap");
+  const p1 = document.getElementById("playerOneInput").value;
+  const p2 = document.getElementById("playerTwoInput").value;
   const p1FightStyle = document.querySelector(
     "#fightingStyle1",
     "select"
@@ -32,10 +32,10 @@ pForm.addEventListener("submit", (event) => {
     "#fightingStyle2",
     "select"
   ).value;
-  console.log(p1.value, "-", p1FightStyle, p2.value, "-", p2FightStyle);
+  console.log(p1, "-", p1FightStyle, p2, "-", p2FightStyle);
 
-  const p1Wrp = document.getElementById("playerOneWrap");
-  p1Wrp.append(p1.value);
+  p1Wrp.innerText = "";
+  p1Wrp.append(p1, p1FightStyle, p2, p2FightStyle);
 });
 
 const punchBtn = document.querySelector("#punch");
@@ -43,7 +43,8 @@ const kickBtn = document.querySelector("#kick");
 
 punchBtn.addEventListener("click", (event) => {
   event.preventDefault();
-  return fighter2.hitOpponent(fighter2.punch());
+
+  return fighter3.getHitByOpponent(fighter2.punch());
 });
 
 kickBtn.addEventListener("click", (event) => {

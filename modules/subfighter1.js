@@ -6,8 +6,8 @@ export default class Subfighter1 extends Fighters {
   #draws = 0;
   hp = 100;
 
-  constructor(name, style, hp) {
-    super(name, style, hp);
+  constructor(name, style) {
+    super(name, style, 300);
   }
   punch() {
     const punch = Math.round(Math.random() * 20);

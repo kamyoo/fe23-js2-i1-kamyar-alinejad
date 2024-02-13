@@ -9,9 +9,9 @@ export default class Subfighter2 extends Fighters {
   constructor(name, style, hp) {
     super(name, style, hp);
   }
-  sword() {
-    const sword = Math.floor(Math.random() * 30);
-    return sword;
+  grapplethrow() {
+    const grapplethrow = Math.floor(Math.random() * 30);
+    return grapplethrow;
   }
   winFight() {
     this.#wins++;
