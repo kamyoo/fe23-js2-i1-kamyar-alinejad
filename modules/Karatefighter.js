@@ -1,13 +1,12 @@
 import Fighters from "./fighters.js";
 
-export default class Subfighter3 extends Fighters {
+export default class Karatefighter extends Fighters {
   #wins = 0;
   #losses = 0;
   #draws = 0;
-  hp = 100;
 
-  constructor(name, style) {
-    super(name, style, 300);
+  constructor(name, hp) {
+    super(name, hp);
   }
   punch() {
     const punch = Math.round(Math.random() * 20);
@@ -17,6 +16,15 @@ export default class Subfighter3 extends Fighters {
     const kick = Math.round(Math.random() * 20);
     return kick;
   }
+  roundKick() {
+    const roundKick = Math.round(Math.random() * 20);
+    return roundKick;
+  }
+  karatePunch() {
+    const kPunch = Math.round(Math.random() * 20);
+    return kPunch;
+  }
+
   winFight() {
     this.#wins++;
   }

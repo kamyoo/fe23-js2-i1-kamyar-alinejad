@@ -1,4 +1,16 @@
-#startFightBtn{
-    width:250px;
-    margin-top: 3px;
+#startFightBtn {
+  width: 250px;
+  margin-top: 3px;
+}
+
+#fightWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.p1div {
+  background-color: aqua;
+}
+.p2div {
+  background-color: red;
 }
