@@ -6,6 +6,8 @@ import {
   showBoxingButtonsP2,
   showGrapplerButtonsP1,
   showGrapplerButtonsP2,
+  showKickboxingButtonsP1,
+  showKickboxingButtonsP2,
 } from "./modules/fight.js";
 import Karatefighter from "./modules/Karatefighter.js";
 import Grappler from "./modules/Grappler.js";
@@ -66,6 +68,8 @@ pForm.addEventListener("submit", (event) => {
     showBoxingButtonsP1(fighter, fighter2);
   } else if (p1FightStyle === "grapple") {
     showGrapplerButtonsP1(fighter, fighter2);
+  } else if (p1FightStyle === "kickbox") {
+    showKickboxingButtonsP1(fighter, fighter2);
   }
 
   if (p2FightStyle === "karate") {
@@ -74,6 +78,8 @@ pForm.addEventListener("submit", (event) => {
     showBoxingButtonsP2(fighter2, fighter);
   } else if (p2FightStyle === "grapple") {
     showGrapplerButtonsP2(fighter2, fighter);
+  } else if (p2FightStyle === "kickbox") {
+    showKickboxingButtonsP2(fighter2, fighter);
   }
   pForm.innerHTML = "";
   const p1div = document.querySelector(".p1div");
@@ -85,21 +91,3 @@ pForm.addEventListener("submit", (event) => {
   p2H1.innerText = fighter2.getName();
   p2div.prepend(p2H1);
 });
-
-// pForm.addEventListener("submit", (event) => {
-//   event.preventDefault();
-// });
-
-// const punchBtn = document.querySelector("#punch");
-// const kickBtn = document.querySelector("#kick");
-
-// punchBtn.addEventListener("click", (event) => {
-//   event.preventDefault();
-
-//   return fighter3.getHitByOpponent(fighter2.punch());
-// });
-
-// kickBtn.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   return fighter2.hitOpponent(fighter2.kick());
-// });

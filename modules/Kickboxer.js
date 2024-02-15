@@ -8,9 +8,9 @@ export default class KickboxFighter extends Fighters {
   constructor(name, hp) {
     super(name, hp);
   }
-  punch() {
-    const punch = Math.round(Math.random() * 20);
-    return punch;
+  kickAndPunch() {
+    const kickAndPunch = Math.round(Math.random() * 20);
+    return kickAndPunch;
   }
   kick() {
     const kick = Math.round(Math.random() * 20);
@@ -20,9 +20,9 @@ export default class KickboxFighter extends Fighters {
     const roundKick = Math.round(Math.random() * 20);
     return roundKick;
   }
-  karatePunch() {
-    const kPunch = Math.round(Math.random() * 20);
-    return kPunch;
+  flyKick() {
+    const flyKick = Math.round(Math.random() * 20);
+    return flyKick;
   }
   winFight() {
     this.#wins++;

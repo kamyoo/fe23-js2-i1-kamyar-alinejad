@@ -95,19 +95,19 @@ export function showBoxingButtonsP1(p1, p2) {
   const p1Div = document.querySelector(".p1div");
   uppercutButton.addEventListener("click", () => {
     p2.getHitByOpponent(p1.uppercut());
-    showFighterHp(p2, p1);
+    showFighterHp(p1, p2);
   });
   jabButton.addEventListener("click", () => {
     p2.getHitByOpponent(p1.jab());
-    showFighterHp(p2, p1);
+    showFighterHp(p1, p2);
   });
   boxButton.addEventListener("click", () => {
     p2.getHitByOpponent(p1.box());
-    showFighterHp(p2, p1);
+    showFighterHp(p1, p2);
   });
   biteEarButton.addEventListener("click", () => {
     p2.getHitByOpponent(p1.biteEar());
-    showFighterHp(p2, p1);
+    showFighterHp(p1, p2);
   });
   uppercutButton.innerText = "Uppercut";
   boxButton.innerText = "Box";
@@ -161,19 +161,19 @@ export function showGrapplerButtonsP1(p1, p2) {
   const p1Div = document.querySelector(".p1div");
   grappleButton.addEventListener("click", () => {
     p2.getHitByOpponent(p1.grapple());
-    showFighterHp(p2, p1);
+    showFighterHp(p1, p2);
   });
   grapplethrowButton.addEventListener("click", () => {
     p2.getHitByOpponent(p1.grapplethrow());
-    showFighterHp(p2, p1);
+    showFighterHp(p1, p2);
   });
   grapple2Button.addEventListener("click", () => {
     p2.getHitByOpponent(p1.grapple2());
-    showFighterHp(p2, p1);
+    showFighterHp(p1, p2);
   });
   grapple3Button.addEventListener("click", () => {
     p2.getHitByOpponent(p1.grapple3());
-    showFighterHp(p2, p1);
+    showFighterHp(p1, p2);
   });
   grappleButton.innerText = "Grapple";
   grapplethrowButton.innerText = "Grapple throw";
@@ -217,4 +217,69 @@ export function showGrapplerButtonsP2(p2, p1) {
   p2Div.append(grapplethrowButton);
   p2Div.append(grapple2Button);
   p2Div.append(grapple3Button);
+}
+
+export function showKickboxingButtonsP1(p1, p2) {
+  const kickAndPunchButton = document.createElement("button");
+  const kickButton = document.createElement("button");
+  const roundKickButton = document.createElement("button");
+  const flyKickButton = document.createElement("button");
+  const p1Div = document.querySelector(".p1div");
+  kickAndPunchButton.addEventListener("click", () => {
+    p2.getHitByOpponent(p1.kickAndPunch());
+    showFighterHp(p1, p2);
+  });
+  kickButton.addEventListener("click", () => {
+    p2.getHitByOpponent(p1.kick());
+    showFighterHp(p1, p2);
+  });
+  roundKickButton.addEventListener("click", () => {
+    p2.getHitByOpponent(p1.roundKick());
+    showFighterHp(p1, p2);
+  });
+  flyKickButton.addEventListener("click", () => {
+    p2.getHitByOpponent(p1.flyKick());
+    showFighterHp(p1, p2);
+  });
+  kickAndPunchButton.innerText = "Kick & punch";
+  kickButton.innerText = "Kick";
+  roundKickButton.innerText = "roundkick";
+  flyKickButton.innerText = "Flykick";
+
+  p1Div.append(kickAndPunchButton);
+  p1Div.append(kickButton);
+  p1Div.append(roundKickButton);
+  p1Div.append(flyKickButton);
+}
+export function showKickboxingButtonsP2(p2, p1) {
+  const kickAndPunchButton = document.createElement("button");
+  const kickButton = document.createElement("button");
+  const roundKickButton = document.createElement("button");
+  const flyKickButton = document.createElement("button");
+  const p2Div = document.querySelector(".p2div");
+  kickAndPunchButton.addEventListener("click", () => {
+    p1.getHitByOpponent(p2.kickAndPunch());
+    showFighterHp(p1, p2);
+  });
+  kickButton.addEventListener("click", () => {
+    p1.getHitByOpponent(p2.kick());
+    showFighterHp(p1, p2);
+  });
+  roundKickButton.addEventListener("click", () => {
+    p1.getHitByOpponent(p2.roundKick());
+    showFighterHp(p1, p2);
+  });
+  flyKickButton.addEventListener("click", () => {
+    p1.getHitByOpponent(p2.flyKick());
+    showFighterHp(p1, p2);
+  });
+  kickAndPunchButton.innerText = "Kick & punch";
+  kickButton.innerText = "Kick";
+  roundKickButton.innerText = "roundkick";
+  flyKickButton.innerText = "Flykick";
+
+  p2Div.append(kickAndPunchButton);
+  p2Div.append(kickButton);
+  p2Div.append(roundKickButton);
+  p2Div.append(flyKickButton);
 }
