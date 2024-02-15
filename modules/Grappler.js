@@ -8,25 +8,21 @@ export default class Grappler extends Fighters {
   constructor(name, hp) {
     super(name, hp);
   }
-  grapplethrow() {
-    const grapplethrow = Math.floor(Math.random() * 30);
-    return grapplethrow;
+  grapple() {
+    const grapple = Math.floor(Math.random() * 30);
+    return grapple;
   }
-  punch() {
-    const punch = Math.round(Math.random() * 20);
-    return punch;
+  grappletThrow() {
+    const grappleThrow = Math.round(Math.random() * 20);
+    return grappleThrow;
   }
-  kick() {
-    const kick = Math.round(Math.random() * 20);
-    return kick;
+  grapple2() {
+    const grapple2 = Math.round(Math.random() * 20);
+    return grapple2;
   }
-  roundKick() {
-    const roundKick = Math.round(Math.random() * 20);
-    return roundKick;
-  }
-  karatePunch() {
-    const kPunch = Math.round(Math.random() * 20);
-    return kPunch;
+  grapple3() {
+    const grapple3 = Math.round(Math.random() * 20);
+    return grapple3;
   }
   winFight() {
     this.#wins++;

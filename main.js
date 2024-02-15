@@ -2,11 +2,16 @@ import {
   showFighterHp,
   showKarateButtonsP1,
   showKarateButtonsP2,
+  showBoxingButtonsP1,
+  showBoxingButtonsP2,
+  showGrapplerButtonsP1,
+  showGrapplerButtonsP2,
 } from "./modules/fight.js";
 import Karatefighter from "./modules/Karatefighter.js";
 import Grappler from "./modules/Grappler.js";
 import BoxingFighter from "./modules/Boxingfighter.js";
 import KickboxFighter from "./modules/Kickboxer.js";
+import Fighters from "./modules/fighters.js";
 
 const pForm = document.getElementById("playerForm");
 let fighter = null;
@@ -55,9 +60,21 @@ pForm.addEventListener("submit", (event) => {
       fighter2 = new KickboxFighter(p2, 100);
       break;
   }
+  if (p1FightStyle === "karate") {
+    showKarateButtonsP1(fighter, fighter2);
+  } else if (p1FightStyle === "boxing") {
+    showBoxingButtonsP1(fighter, fighter2);
+  } else if (p1FightStyle === "grapple") {
+    showGrapplerButtonsP1(fighter, fighter2);
+  }
 
-  showKarateButtonsP1(fighter, fighter2);
-  showKarateButtonsP2(fighter2, fighter);
+  if (p2FightStyle === "karate") {
+    showKarateButtonsP2(fighter2, fighter);
+  } else if (p2FightStyle === "boxing") {
+    showBoxingButtonsP2(fighter2, fighter);
+  } else if (p2FightStyle === "grapple") {
+    showGrapplerButtonsP2(fighter2, fighter);
+  }
   pForm.innerHTML = "";
   const p1div = document.querySelector(".p1div");
   const p2div = document.querySelector(".p2div");

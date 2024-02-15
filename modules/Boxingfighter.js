@@ -8,21 +8,21 @@ export default class BoxingFighter extends Fighters {
   constructor(name, hp) {
     super(name, hp);
   }
-  punch() {
-    const punch = Math.round(Math.random() * 20);
-    return punch;
+  uppercut() {
+    const uppercut = Math.round(Math.random() * 20);
+    return uppercut;
   }
-  kick() {
-    const kick = Math.round(Math.random() * 20);
-    return kick;
+  jab() {
+    const jab = Math.round(Math.random() * 20);
+    return jab;
   }
-  roundKick() {
-    const roundKick = Math.round(Math.random() * 20);
-    return roundKick;
+  box() {
+    const box = Math.round(Math.random() * 20);
+    return box;
   }
-  karatePunch() {
-    const kPunch = Math.round(Math.random() * 20);
-    return kPunch;
+  biteEar() {
+    const biteEar = Math.round(Math.random() * 20);
+    return biteEar;
   }
   winFight() {
     this.#wins++;
