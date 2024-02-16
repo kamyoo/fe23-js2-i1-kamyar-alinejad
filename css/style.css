@@ -9,8 +9,23 @@
 }
 
 .p1div {
-  background-color: aqua;
+  background-color: white;
 }
 .p2div {
-  background-color: red;
+  background-color: white;
+}
+.newclass {
+  color: brown;
+}
+.karate {
+  width: 10rem;
+}
+.boxer {
+  width: 10rem;
+}
+.kickboxer {
+  width: 10rem;
+}
+.grappler {
+  width: 10rem;
 }

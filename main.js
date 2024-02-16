@@ -18,7 +18,10 @@ import Fighters from "./modules/fighters.js";
 const pForm = document.getElementById("playerForm");
 let fighter = null;
 let fighter2 = null;
-
+const p1div = document.querySelector(".p1div");
+const p2div = document.querySelector(".p2div");
+const p1H1 = document.createElement("h1");
+const p2H1 = document.createElement("h1");
 pForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const p1 = document.getElementById("playerOneInput").value;
@@ -37,6 +40,7 @@ pForm.addEventListener("submit", (event) => {
   switch (p1FightStyle) {
     case "karate":
       fighter = new Karatefighter(p1, 100);
+      p1div.className = "newclass";
       break;
     case "boxing":
       fighter = new BoxingFighter(p1, 100);
@@ -64,8 +68,10 @@ pForm.addEventListener("submit", (event) => {
   }
   if (p1FightStyle === "karate") {
     showKarateButtonsP1(fighter, fighter2);
+    fighter.karateImage(p1div);
   } else if (p1FightStyle === "boxing") {
     showBoxingButtonsP1(fighter, fighter2);
+    fighter.boxerImage(p1div);
   } else if (p1FightStyle === "grapple") {
     showGrapplerButtonsP1(fighter, fighter2);
   } else if (p1FightStyle === "kickbox") {
@@ -74,20 +80,20 @@ pForm.addEventListener("submit", (event) => {
 
   if (p2FightStyle === "karate") {
     showKarateButtonsP2(fighter2, fighter);
+    fighter2.karateImage(p2div);
   } else if (p2FightStyle === "boxing") {
     showBoxingButtonsP2(fighter2, fighter);
+    fighter2.boxerImage(p2div);
   } else if (p2FightStyle === "grapple") {
     showGrapplerButtonsP2(fighter2, fighter);
   } else if (p2FightStyle === "kickbox") {
     showKickboxingButtonsP2(fighter2, fighter);
   }
   pForm.innerHTML = "";
-  const p1div = document.querySelector(".p1div");
-  const p2div = document.querySelector(".p2div");
-  const p1H1 = document.createElement("h1");
+
   p1H1.innerText = fighter.getName();
   p1div.prepend(p1H1);
-  const p2H1 = document.createElement("h1");
+
   p2H1.innerText = fighter2.getName();
   p2div.prepend(p2H1);
 });

@@ -19,47 +19,46 @@ function showFighter(fighter, newEl) {
     document.body.append(h1El);
   }
 }
+const p1punchButton = document.createElement("button");
+const p1kickButton = document.createElement("button");
+const p1roundKickButton = document.createElement("button");
+const p1karatePunchButton = document.createElement("button");
 
+const punchButton = document.createElement("button");
+const kickButton = document.createElement("button");
+const roundKickButton = document.createElement("button");
+const karatePunchButton = document.createElement("button");
+const p2Div = document.querySelector(".p2btndiv");
+const p1Div = document.querySelector(".p1btndiv");
 export function showKarateButtonsP1(p1, p2) {
-  const punchButton = document.createElement("button");
-  const kickButton = document.createElement("button");
-  const roundKickButton = document.createElement("button");
-  const karatePunchButton = document.createElement("button");
-  const p1Div = document.querySelector(".p1div");
-
-  punchButton.addEventListener("click", () => {
+  p1punchButton.addEventListener("click", () => {
     p2.getHitByOpponent(p1.punch());
     showFighterHp(p1, p2);
   });
-  kickButton.addEventListener("click", () => {
+  p1kickButton.addEventListener("click", () => {
     p2.getHitByOpponent(p1.kick());
     showFighterHp(p1, p2);
   });
-  roundKickButton.addEventListener("click", () => {
+  p1roundKickButton.addEventListener("click", () => {
     p2.getHitByOpponent(p1.roundKick());
     showFighterHp(p1, p2);
   });
-  karatePunchButton.addEventListener("click", () => {
+  p1karatePunchButton.addEventListener("click", () => {
     p2.getHitByOpponent(p1.karatePunch());
     showFighterHp(p1, p2);
   });
-  punchButton.innerText = "Punch";
-  kickButton.innerText = "Kick";
-  roundKickButton.innerText = "Round-Kick";
-  karatePunchButton.innerText = "KaratePunch";
+  p1punchButton.innerText = "Punch";
+  p1kickButton.innerText = "Kick";
+  p1roundKickButton.innerText = "Round-Kick";
+  p1karatePunchButton.innerText = "KaratePunch";
 
-  p1Div.append(kickButton);
-  p1Div.append(punchButton);
-  p1Div.append(roundKickButton);
-  p1Div.append(karatePunchButton);
+  p1Div.append(p1kickButton);
+  p1Div.append(p1punchButton);
+  p1Div.append(p1roundKickButton);
+  p1Div.append(p1karatePunchButton);
 }
 
 export function showKarateButtonsP2(p2, p1) {
-  const punchButton = document.createElement("button");
-  const kickButton = document.createElement("button");
-  const roundKickButton = document.createElement("button");
-  const karatePunchButton = document.createElement("button");
-  const p2Div = document.querySelector(".p2div");
   punchButton.addEventListener("click", () => {
     p1.getHitByOpponent(p2.punch());
     showFighterHp(p1, p2);
@@ -92,7 +91,7 @@ export function showBoxingButtonsP1(p1, p2) {
   const jabButton = document.createElement("button");
   const boxButton = document.createElement("button");
   const biteEarButton = document.createElement("button");
-  const p1Div = document.querySelector(".p1div");
+  // const p1Div = document.querySelector(".p1div");
   uppercutButton.addEventListener("click", () => {
     p2.getHitByOpponent(p1.uppercut());
     showFighterHp(p1, p2);
@@ -125,7 +124,7 @@ export function showBoxingButtonsP2(p2, p1) {
   const jabButton = document.createElement("button");
   const boxButton = document.createElement("button");
   const biteEarButton = document.createElement("button");
-  const p2Div = document.querySelector(".p2div");
+  // const p2Div = document.querySelector(".p2div");
   uppercutButton.addEventListener("click", () => {
     p1.getHitByOpponent(p2.uppercut());
     showFighterHp(p1, p2);
@@ -158,7 +157,7 @@ export function showGrapplerButtonsP1(p1, p2) {
   const grapplethrowButton = document.createElement("button");
   const grapple2Button = document.createElement("button");
   const grapple3Button = document.createElement("button");
-  const p1Div = document.querySelector(".p1div");
+  // const p1Div = document.querySelector(".p1div");
   grappleButton.addEventListener("click", () => {
     p2.getHitByOpponent(p1.grapple());
     showFighterHp(p1, p2);
@@ -191,7 +190,7 @@ export function showGrapplerButtonsP2(p2, p1) {
   const grapplethrowButton = document.createElement("button");
   const grapple2Button = document.createElement("button");
   const grapple3Button = document.createElement("button");
-  const p2Div = document.querySelector(".p2div");
+  // const p2Div = document.querySelector(".p2div");
   grappleButton.addEventListener("click", () => {
     p1.getHitByOpponent(p2.grapple());
     showFighterHp(p1, p2);
@@ -224,7 +223,7 @@ export function showKickboxingButtonsP1(p1, p2) {
   const kickButton = document.createElement("button");
   const roundKickButton = document.createElement("button");
   const flyKickButton = document.createElement("button");
-  const p1Div = document.querySelector(".p1div");
+  // const p1Div = document.querySelector(".p1div");
   kickAndPunchButton.addEventListener("click", () => {
     p2.getHitByOpponent(p1.kickAndPunch());
     showFighterHp(p1, p2);
@@ -256,7 +255,7 @@ export function showKickboxingButtonsP2(p2, p1) {
   const kickButton = document.createElement("button");
   const roundKickButton = document.createElement("button");
   const flyKickButton = document.createElement("button");
-  const p2Div = document.querySelector(".p2div");
+  // const p2Div = document.querySelector(".p2div");
   kickAndPunchButton.addEventListener("click", () => {
     p1.getHitByOpponent(p2.kickAndPunch());
     showFighterHp(p1, p2);

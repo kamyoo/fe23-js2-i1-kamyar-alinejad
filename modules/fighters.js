@@ -13,10 +13,6 @@ export default class Fighters {
   //   } fighter`;
   //   document.body.append(presentH1);
   // }
-  // hitOpponent(typeOfAction) {
-  //   const hit = typeOfAction;
-  //   console.log(typeOfAction);
-  // }
   getHitByOpponent(action) {
     const getHit = action;
     this.#hp -= getHit;
