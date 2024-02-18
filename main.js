@@ -74,8 +74,10 @@ pForm.addEventListener("submit", (event) => {
     fighter.boxerImage(p1div);
   } else if (p1FightStyle === "grapple") {
     showGrapplerButtonsP1(fighter, fighter2);
+    fighter.grapplerImage(p1div);
   } else if (p1FightStyle === "kickbox") {
     showKickboxingButtonsP1(fighter, fighter2);
+    fighter.kickBoxerImage(p1div);
   }
 
   if (p2FightStyle === "karate") {
@@ -86,8 +88,10 @@ pForm.addEventListener("submit", (event) => {
     fighter2.boxerImage(p2div);
   } else if (p2FightStyle === "grapple") {
     showGrapplerButtonsP2(fighter2, fighter);
+    fighter2.grapplerImage(p2div);
   } else if (p2FightStyle === "kickbox") {
     showKickboxingButtonsP2(fighter2, fighter);
+    fighter2.kickBoxerImage(p2div);
   }
   pForm.innerHTML = "";
 

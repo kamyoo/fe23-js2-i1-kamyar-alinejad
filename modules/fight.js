@@ -163,7 +163,7 @@ export function showGrapplerButtonsP1(p1, p2) {
     showFighterHp(p1, p2);
   });
   grapplethrowButton.addEventListener("click", () => {
-    p2.getHitByOpponent(p1.grapplethrow());
+    p2.getHitByOpponent(p1.grapplerThrow());
     showFighterHp(p1, p2);
   });
   grapple2Button.addEventListener("click", () => {
@@ -196,7 +196,7 @@ export function showGrapplerButtonsP2(p2, p1) {
     showFighterHp(p1, p2);
   });
   grapplethrowButton.addEventListener("click", () => {
-    p1.getHitByOpponent(p2.grapplethrow());
+    p1.getHitByOpponent(p2.grapplerThrow());
     showFighterHp(p1, p2);
   });
   grapple2Button.addEventListener("click", () => {
